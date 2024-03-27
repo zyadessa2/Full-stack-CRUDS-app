@@ -11,11 +11,23 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
+import { signOut } from "firebase/auth";
+import { auth } from "../../Firebase";
 
 const Sidebar = () => {
+  const navigate = useNavigate()
+  const handleLogout =()=>{
+    signOut(auth).then(() => {
+      navigate("/login")
+      console.log("logout succ");
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+
   const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="sidebar">
@@ -82,7 +94,7 @@ const Sidebar = () => {
           </li>
           <li>
             <ExitToAppIcon className="icon" />
-            <span>Logout</span>
+            <span onClick={handleLogout}>Logout</span>
           </li>
         </ul>
       </div>
