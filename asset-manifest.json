@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Full-stack-CRUDS-app/static/css/main.fb06e39a.css",
+    "main.js": "/Full-stack-CRUDS-app/static/js/main.5ccfeedb.js",
+    "index.html": "/Full-stack-CRUDS-app/index.html",
+    "main.fb06e39a.css.map": "/Full-stack-CRUDS-app/static/css/main.fb06e39a.css.map",
+    "main.5ccfeedb.js.map": "/Full-stack-CRUDS-app/static/js/main.5ccfeedb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb06e39a.css",
+    "static/js/main.5ccfeedb.js"
+  ]
+}
